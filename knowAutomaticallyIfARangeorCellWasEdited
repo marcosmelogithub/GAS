@@ -1,0 +1,9 @@
+==================================================================================================
+Function, call automatically, when a range or cell was edited
+In the example below, show which cell (row and column) was edited
+==================================================================================================
+function onEdit(e){
+  Browser.msgBox("Range " + SpreadsheetApp.getActive().getActiveSheet().getActiveCell().getRow() + 
+                 "/" + SpreadsheetApp.getActive().getActiveSheet().getActiveCell().getColumn() + 
+                 " was edited");
+}
