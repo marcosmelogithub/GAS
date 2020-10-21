@@ -17,11 +17,11 @@
    rng.clearContent();
    
    ============================================================================================
-   The fourth step is setting the list of the data validation into variable
+   The fourth step is setting the data validation list into variable
    ============================================================================================
    var settingDataValidation = SpreadsheetApp.newDataValidation().requireValueInList(array_with_Data_Validation_List).build();
    
    ============================================================================================
-   The fifth step is saving the list of the data validation into the range to use
+   The fifth step is saving the data validation into the range to use
    ============================================================================================   
    rng.setDataValidation(settingDataValidation);
