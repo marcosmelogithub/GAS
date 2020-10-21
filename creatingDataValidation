@@ -1,6 +1,7 @@
    ============================================================================================
    The first step is getting the list to use like data validation into an array 1D
-   If the data validation list come from a txt/csv file, vide 
+   If the data validation list come from a txt/csv file, 
+   vide 'gettingTXTandCSVFilesFromGoogleDrive' this repository
    ============================================================================================
    
    ============================================================================================
