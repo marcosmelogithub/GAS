@@ -1,17 +1,17 @@
 =======================================================================
-1o) abre arquivo txt or csv a partir do id do arquivo e registra
-    os metadados do arquivo em uma variável
+1o) Opening the txt or csv file and saving their metadata into a variable
 =======================================================================
 var metadataOfFile = DriveApp.getFileById(idFile);
 
 =======================================================================
-2o) Carrega o conteúdo do arquivo aberto em uma variável
+2o) Saving theircontent into a variable
 =======================================================================
 var fileContent = metadataOfFile.getAs('text/plain').getDataAsString();
 
 =======================================================================
-3o) Carrega as linhas do arquivo em um array unidimensional
-    Cada linha do arquivo será um elemento do array.
-    Ou seja, se o arquivo tiver 100 linhas, o array terá 100 elementos
+3o) Saving their content into an array 1D, where each line of file
+    will be one element of the array
+    
+    For example, if the file have 100 lines, the array will have 100 elements
 =======================================================================
 var arrFileContent = fileContent.split('\n');
