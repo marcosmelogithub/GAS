@@ -1,0 +1,7 @@
+=====================================================================================================
+The function show how to create a sidebar into G Suite applications, using the Google Sheets like an example
+=====================================================================================================
+function createSideBar() {
+    var html = HtmlService.createHtmlOutput('<button onClick="alert(\'Hello, World!\');">Click</button>').setTitle('My First sidebar');
+    var spp = SpreadsheetApp.getUi().showSidebar(html);
+}
