@@ -1,0 +1,12 @@
+=====================================================================================================
+A função abaixo mostra como exibir um sidebar (que é uma seção lateral em qualquer programa G Suite
+(sheets, docs, slides, gmail, etc) e dentro desse sidebar ser possível tratar interaçoes HTML, CSS e
+JS.
+
+No exemplo abaixo abrirá um sidebar em uma sheet e exibirá um botão de Hello World, apenas como
+demonstração como se consegue mostrar um sidebar
+=====================================================================================================
+function createSide() {
+    var html = HtmlService.createHtmlOutput('<button onClick="alert(\'Hello, World!\');">Click</button>').setTitle('First sidebar');
+    var spp = SpreadsheetApp.getUi().showSidebar(html);
+}
