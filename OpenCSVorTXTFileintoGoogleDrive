@@ -1,4 +1,0 @@
-=========================================================================================
-A partir do id do arquivo, abre o arquivo e grava os metas dados em uma variável
-=========================================================================================
-var fileOpened = DriveApp.getFileById(id); // Abre o arquivo CSV ou TXT
