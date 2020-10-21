@@ -1,0 +1,26 @@
+   ============================================================================================
+   The first step is getting the list to use like data validation into an array 1D
+   If the data validation list come from a txt/csv file, vide 
+   ============================================================================================
+   
+   ============================================================================================
+   The second step is to define the range where will be created the data validation
+   ============================================================================================
+   var rng = SpreadsheetApp.getActive().getzSheetByName("nome-da-sheet").getRange(line, column);
+   
+   ============================================================================================
+   The thirt step is cleaning the data validation and content into range where the new data 
+   validation will be create
+   ============================================================================================
+   rng.clearDataValidations();
+   rng.clearContent();
+   
+   ============================================================================================
+   The fourth step is setting the list of the data validation into variable
+   ============================================================================================
+   var settingDataValidation = SpreadsheetApp.newDataValidation().requireValueInList(array_with_Data_Validation_List).build();
+   
+   ============================================================================================
+   The fifth step is saving the list of the data validation into the range to use
+   ============================================================================================   
+   rng.setDataValidation(settingDataValidation);
