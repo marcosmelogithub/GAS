@@ -1,0 +1,5 @@
+//======================================================================
+// How get last characters from string
+//======================================================================
+var stringSource = "anomes202009";
+var lastSixCharacters = stringSource.slice(-6); // will return into the lastSixCharacters variable the information "202009"
