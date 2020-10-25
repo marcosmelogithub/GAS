@@ -1,0 +1,13 @@
+//==================================================================
+// How get substring from string using date ddmmyyy like example
+//==================================================================
+
+                     //01234567 - first parameter of the substring
+                    // 2 4   8 - second parameter of the substring
+  var stringSource = "25102020";  // declare source string to get substring
+
+  Logger.log(stringSource);
+  
+  Logger.log("Day: " + stringSource.substring(0,2));     // show the day, starting position 0, finish position 2
+  Logger.log("Month: " + stringSource.substring(2,4));   // show the month, starting position 2, finish position 4
+  Logger.log("Year: " + stringSource.substring(4,8));    // show the year, starting position 4, finish position 8
