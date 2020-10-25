@@ -4,7 +4,7 @@
 var metadataOfFile = DriveApp.getFileById(idFile);
 
 =======================================================================
-2o) Saving theircontent into a variable
+2o) Saving their content into a variable
 =======================================================================
 var fileContent = metadataOfFile.getAs('text/plain').getDataAsString();
 
