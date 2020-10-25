@@ -1,0 +1,15 @@
+  //=========================================================================
+  // The objective is show how sum strings
+  
+  // Declare 4 strings with integer number and decimals, using the comma like separator of the decimals.
+  var num0 = "63254,5"
+  var num1 = "38902,02"
+  var num2 = "55655,23"
+  var num3 = "42094,6"
+
+  // Sum num0 + num1 + num2 + num3 saving the result into totalize variable
+  //
+  // One important action is replace "," to "." to the sum operation recognize decimals, case the decimals separator be a comma.
+  // To this during the operation, use the function "replace" to replace comma to dot, if the decimals separator to be the comma.
+  // If the decimals separator to be the dot, nothing is replaced, but the sum is run normally.
+  var totalize = +num0.replace(",",".") + +num1.replace(",",".") + +num2.replace(",",".") + +num3.replace(",",".");
