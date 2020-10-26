@@ -1,15 +1,30 @@
   //=========================================================================
-  // The objective is show how sum strings
+  // The objective is show how sum strings values
+  // Code example below
+  //=========================================================================
   
-  // Declare 4 strings with integer number and decimals, using the comma like separator of the decimals.
-  var num0 = "63254,5"
-  var num1 = "38902,02"
-  var num2 = "55655,23"
-  var num3 = "42094,6"
+  var nums = [] // declare an array to save the values to sum
+  nums[0] = "63254,5"  // 1o element
+  nums[1] = "38902,02" // 2o elemnt
+  nums[2] = "55655,23" // 3o element
+  nums[3] = "42094,6"  // 4o element
 
-  // Sum num0 + num1 + num2 + num3 saving the result into totalize variable
-  //
-  // One important action is replace "," to "." to the sum operation recognize decimals, case the decimals separator be a comma.
-  // To this during the operation, use the function "replace" to replace comma to dot, if the decimals separator to be the comma.
-  // If the decimals separator to be the dot, nothing is replaced, but the sum is run normally.
-  var totalize = +num0.replace(",",".") + +num1.replace(",",".") + +num2.replace(",",".") + +num3.replace(",",".");
+  var totalize = 0 // declare a variable to totalize values
+  
+  for (var i = 0;i<4;i++){totalize = totalize + adjustStringToSum(nums[i])}  // sum values,
+                                                                             // calling the adjustStringToSum function to prepare string that will be summed
+  
+  Browser.msgBox("totalize..: " + totalize); // show the result of the totalization
+}
+
+
+//=========================================================================================================
+// Function that prepare string value, returning a number that can be summed
+// The only parameter that this function receive is the value of the string that desire transform in number
+//=========================================================================================================
+function adjustStringToSum(stringToAdjust){
+      stringToAdjust = stringToAdjust.replace(/ /g,"");   // 1o) remove all space with replace command and regex
+      stringToAdjust = stringToAdjust.replace(/\./g,'');  // 2o) remove all dots with replace command and regex
+      stringToAdjust = stringToAdjust.replace(",",".");   // 3o) replace comma by dot with replace command
+      return +stringToAdjust;                             // return the number that will be summed
+}
